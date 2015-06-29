@@ -32,6 +32,7 @@ read ans1
         mkdir /var/tmp/$name
         mkdir /var/tmp/$name/log
         cd $FWDIR/log
+        fw logswitch
         cp -v [0-9][0-9][0-9][0-9]\-[0-9][0-9]\-[0-9][0-9]* /var/tmp/$location/
         cd /var/tmp/
         echo "Collection complete"
