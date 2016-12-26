@@ -75,10 +75,10 @@ echo "---------------------------" >> ${MAIL_LOG}
 ftp -n $FTP_SERVER <<EOF >> ${MAIL_LOG}
 user ${FTP_USER} ${FTP_PASS} 
 binary 
-cd ${FTP_REMOTE_DIR} >> ${MAIL_LOG}
-lcd ${FTP_LOCAL_DIR} >> ${MAIL_LOG}
-put ${FILENAME}.tar.gz >> ${MAIL_LOG}
-bye >> ${MAIL_LOG}
+cd ${FTP_REMOTE_DIR}
+lcd ${FTP_LOCAL_DIR}
+put ${FILENAME}.tar.gz 
+bye
 EOC
 #
 #
