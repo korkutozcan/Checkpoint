@@ -24,6 +24,7 @@ MAIL1="xxxxx@xxxx.com"
 ###/usr/sbin/ntpdate 4.2.2.2
 #
 ### create /var/tmp/upgrade_export
+touch $MAIL_LOG}
 mkdir /var/tmp/upgrade_export > ${MAIL_LOG}
 ### Enter /var/tmp directory
 #
@@ -59,7 +60,6 @@ echo " "
 #
 ### Start the upgrade_export process
 #echo Y | /opt/CPsuite-R77/fw1/bin/upgrade_tools/upgrade_export $FILENAME >> ${MAIL_LOG}
-touch $MAIL_LOG}
 echo "$(date +%H:%M) ---- ${HOSTNAME} Start the upgrade_export process -----"  >> ${MAIL_LOG}
 #${SENDMAIL} -t ${SMTP_SERVER} -s "${HOSTNAME} Upgrade_Export Backup" -f ${MAIL_SENDER} ${MAIL1} < ${MAIL_LOG}
 ${FWDIR}/bin/upgrade_tools/upgrade_export -n ${FILENAME} >> ${MAIL_LOG}
@@ -89,7 +89,7 @@ echo "$(date +%H:%M) ---- ${HOSTNAME} Finished the upgrade_export process -----"
 ${SENDMAIL} -t ${SMTP_SERVER} -s "${HOSTNAME} Upgrade_Export Backup" -f ${MAIL_SENDER} ${MAIL1} < ${MAIL_LOG}
 #
 ### Remove mail log temporary directory
-#rm -rf $MAIL_LOG}
+rm -rf $MAIL_LOG}
 #
 ### At this point what you may want is to transfer this $FILENAME.tar.gz file
 ### to a safe external system with Secure Copy Protocol or scp.
