@@ -40,6 +40,12 @@ mkdir /var/tmp/upgrade_export/$FILENAME >> ${MAIL_LOG}
 ### Enter temporary upgrade export directory
 cd /var/tmp/upgrade_export/$FILENAME >> ${MAIL_LOG}
 #
+#Gui client verification
+if [ -f $FWDIR/tmp/manage.lock ]
+then
+BackupError Started:Gui_Client_Connected >> ${MAIL_LOG}
+fi
+#
 ### Gather system important information
 #
 echo " "
