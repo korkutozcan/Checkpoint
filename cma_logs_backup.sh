@@ -1,7 +1,7 @@
 #/bin/sh
 # Script written by Korkut Ozcan
 #
-# http://korkutozcan.com 
+# http://korkutozcan.com (01.12.2013)
 # Customer Logs copy script
 #
 # Collects required files for successful migration *away* from Provider-1
