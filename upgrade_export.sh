@@ -24,7 +24,7 @@ MAIL1="xxxxx@xxxx.com"
 ###/usr/sbin/ntpdate 4.2.2.2
 #
 ### create /var/tmp/upgrade_export
-touch $MAIL_LOG}
+touch {$MAIL_LOG}
 mkdir /var/tmp/upgrade_export > ${MAIL_LOG}
 ### Enter /var/tmp directory
 #
